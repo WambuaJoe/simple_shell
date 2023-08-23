@@ -25,14 +25,14 @@ int check_cmd(char *cmd)
 
 /**
  * exec_builtin - func execs builtin commands
- * @cmd: cmd to execute
+ * @command: command to execute
  * @counter: cmd no
  * @argv: arg vector
  *
  * Return: returns 0 on success, -1 otherwise
  */
 
-int exec_builtin(char **cmd, int counter, char *argv)
+int exec_builtin(char **command, int counter, char *argv)
 {
 	int a = 0;
 	built_ins selector[] = {
@@ -42,10 +42,10 @@ int exec_builtin(char **cmd, int counter, char *argv)
 		{NULL, NULL}
 	};
 
-	while ((selector + a)->cmd)
+	while ((selector + a)->command)
 	{
-		if (_strcmp((selector + a)->cmd, cmd[0]) == 0)
-			return ((selector + a)->func(cmd, counter, argv));
+		if (_strcmp((selector + a)->command, command[0]) == 0)
+			return ((selector + a)->func(command, counter, argv));
 		a++;
 	}
 	return (-1);

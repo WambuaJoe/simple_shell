@@ -23,7 +23,7 @@ int __exit(char **cmd, int counter, char *argv)
 
 	while (cmd[1][a])
 	{
-		if (_isdigit(cmd[1][i]) == 0)
+		if (_isdigit(cmd[1][a]) == 0)
 		{
 			write(2, argv, _strlen(argv));
 			write(2, ": ", 2);

@@ -90,7 +90,7 @@ char *_getenv(char *env_name)
 			{
 				val[j] = environ[a][x];
 			}
-			value[j] = '\0';
+			val[j] = '\0';
 
 			return (val);
 		}

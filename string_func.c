@@ -38,7 +38,7 @@ char *_strcat(char *dest, char *src)
 	int leng_dest = 0;
 	int leng_src = 0;
 
-	for (; dest[leng_dest] != '\0'; len_dest++)
+	for (; dest[leng_dest] != '\0'; leng_dest++)
 		;
 
 	for (; src[leng_src] != '\0' ;)

@@ -33,7 +33,7 @@ char *_getline()
 			free(buffer);
 			return ("\0");
 		}
-		if (i >= buff_size)
+		if (a >= buff_size)
 		{
 			buffer = realloc(buffer, buff_size + 1);
 			if (buffer == NULL)
